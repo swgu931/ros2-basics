@@ -1,8 +1,10 @@
 # How to install and test quickly about setting up properly
 
+- ref: https://index.ros.org/doc/ros2/Installation/Dashing/Linux-Development-Setup/
+
 ## Quick Start
 
-1) ROS2 Install 
+1) ROS2 Install from source code
 $ source ./env-setup-ros2.sh
 
 2) Environment Setup 
