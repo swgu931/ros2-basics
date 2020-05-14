@@ -5,10 +5,10 @@
 ## Quick Start
 
 1) ROS2 Install from source code
-$ source ./env-setup-ros2.sh
+$ source ./install-ros2.sh
 
 2) Environment Setup 
-$ source ./install-ros2.sh
+$ source ./env-setup-ros2.sh
 
 
 ## Basice Test for ensuring proper setup
