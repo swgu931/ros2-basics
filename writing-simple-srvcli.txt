@@ -1,0 +1,15 @@
+# Writing a simple service and client (Python)
+
+cd ~/dev_ws/src
+
+ros2 pkg create --build-type ament_python py_srvcli --dependencies rclpy example_interfaces
+
+sudo rosdep install -i --from-path src --rosdistro <distro> -y
+Writing a simple service and client (Python)
+colcon build --packages-select py_srvcli
+
+. install/setup.bash
+
+ros2 run py_srvcli service
+
+ros2 run py_srvcli client 2 3
