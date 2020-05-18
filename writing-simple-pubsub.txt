@@ -1,0 +1,46 @@
+Creating a workspace
+
+source /opt/ros/<distro>/setup.bash
+
+git clone https://github.com/ros/ros_tutorials.git -b dashing-devel
+
+sudo rosdep install -i --from-path src --rosdistro <distro> -y
+
+colcon build
+
+source /opt/ros/<distro>/setup.bash
+
+. install/local_setup.bash
+
+ros2 run turtlesim turtlesim_node
+
+# 7) Modify the overlay
+
+You can modify turtlesim in your overlay by editing the title bar on the turtlesim window. To do this, locate the turtle_frame.cpp file in ~/dev_ws/src/ros_tutorials/turtlesim/src. Open turtle_frame.cpp with your preferred text editor.
+
+colcon build
+
+. install/local_setup.bash
+
+ros2 run turtlesim turtlesim_node
+
+cd ~/dev_ws/src
+ros2 pkg create --build-type ament_python py_pubsub
+
+cd ~/dev_ws/src/py_pubsub/py_pubsub
+wget https://raw.githubusercontent.com/ros2/examples/master/rclpy/topics/minimal_publisher/examples_rclpy_minimal_publisher/publisher_member_function.py
+
+
+package.xml 수정
+setup.py 수정
+
+
+cd ~/dev_ws/src/py_pubsub/py_pubsub
+wget https://raw.githubusercontent.com/ros2/examples/master/rclpy/topics/minimal_subscriber/examples_rclpy_minimal_subscriber/subscriber_member_function.py
+
+sudo rosdep install -i --from-path src --rosdistro <distro> -y
+colcon build --packages-select py_pubsub
+
+. install/setup.bash
+ros2 run py_pubsub talker
+ros2 run py_pubsub listener
