@@ -1,0 +1,34 @@
+# Creating your first ROS 2 package
+- ref: https://index.ros.org/doc/ros2/Tutorials/Creating-Your-First-ROS2-Package/#createpkg
+
+my_package/
+      setup.py
+      package.xml
+      resource/my_package
+
+
+workspace_folder/
+    src/
+      package_1/
+          CMakeLists.txt
+          package.xml
+
+      package_2/
+          setup.py
+          package.xml
+          resource/package_2
+      ...
+      package_n/
+          CMakeLists.txt
+          package.xml
+
+
+cd ~/dev_ws/src
+ros2 pkg create --build-type ament_python <package_name>
+
+cd ~/dev_ws
+colcon build
+
+colcon build --packages-select my_package
+
+ros2 run my_package my_node
