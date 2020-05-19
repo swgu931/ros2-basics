@@ -1,0 +1,35 @@
+# Creating custom ROS 2 msg and srv files
+- https://index.ros.org/doc/ros2/Tutorials/Custom-ROS2-Interfaces/
+
+ros2 pkg create --build-type ament_cmake tutorial_interfaces
+
+cd ~/dev_ws/src/tutorial_interfaces
+
+mkdir msg
+mkdri srv
+
+colcon build --packages-select tutorial_interfaces
+
+. install/setup.bash
+ros2 msg show tutorial_interfaces/msg/Num 
+ros2 srv show tutorial_interfaces/srv/AddThreeInts 
+
+
+# Test the new interfaces
+
+
+## modification for pub, sub & package.xml
+colcon build --packages-select py_pubsub
+
+. install/setup.bash
+ros2 run py_pubsub talker
+ros2 run py_pubsub listener
+
+
+# Testing AddThreeInts.srv with service/client
+
+
+colcon build --packages-select py_srvcli
+
+ros2 run py_srvcli service
+ros2 run py_srvcli client 2 3 1
