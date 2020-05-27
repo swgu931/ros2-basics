@@ -7,7 +7,7 @@ import zmq, sys
 ## 동일하게 컨텍스트를 만들고 
 ctx = zmq.Context()
 
-def run_client(port=7777):
+def run_client(port=5555):
   ## 컨텍스트로부터 소켓을 만들고 서버에 연결한다.
   sock = ctx.socket(zmq.REQ)
   sock.connect(f'tcp://localhost:{port}')
@@ -23,5 +23,5 @@ def run_client(port=7777):
       sock.close()
       break
 
-port = sys.argv[1] if len(sys.argv) > 1 else 7777
+port = sys.argv[1] if len(sys.argv) > 1 else 5555
 run_client(port)
