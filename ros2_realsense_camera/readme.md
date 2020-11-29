@@ -16,6 +16,6 @@ source ./01docker_run_realsense_camera.sh
 ## step 2:
 source ./02setup_realsense_camera_gui.sh
 
-## step 3:
+## step 3: inside docker in running
 source ./03ros2_run_rviz2_realsense_inside_docker.sh
 
