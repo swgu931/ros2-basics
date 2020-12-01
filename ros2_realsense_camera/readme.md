@@ -5,9 +5,9 @@
 
 please install realsense camera with reference below
 
-ref : https://github.com/IntelRealSense/realsense-ros
-ref : https://github.com/IntelRealSense/librealsense/blob/master/doc/distribution_linux.md
-ref : https://index.ros.org/r/ros2_intel_realsense/#dashing
+- ref : https://github.com/IntelRealSense/realsense-ros
+- ref : https://github.com/IntelRealSense/librealsense/blob/master/doc/distribution_linux.md
+- ref : https://index.ros.org/r/ros2_intel_realsense/#dashing
 
 ## step 1:
 
