@@ -1,6 +1,7 @@
 
 # Intel Realsense Dxxx Install
 - ref: https://github.com/IntelRealSense/librealsense/blob/master/doc/distribution_linux.md
+- ref: https://index.ros.org/r/ros2_intel_realsense/
 
 ```
 sudo apt-get install ros-dashing-librealsense2
@@ -36,12 +37,19 @@ source ~/ros2_ws/install/local_setup.bash
 ```
 
 ## using ros2 run
-cd ~/ros2_ws
+- example format
+```
 ros2 run realsense_node realsense_node __params:=`ros2 pkg prefix realsense_examples`/share/realsense_ros/config/d435.yaml __ns:=/d435
-## using ros2 launch
-ros2 launch realsense_examples rs_camera.launch.py
+```
+- example for me
+```
+ros2 run realsense_ros2_camera realsense_ros2_camera
+```
 
-
+## using rviz2 for making sure it's working fine
+```
+ros2 run rviz2 rviz2 -d realsense_ros2_camera/rviz/ros2.rviz
+```
 
 ## reference command
 ```
