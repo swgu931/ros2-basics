@@ -1,5 +1,6 @@
 
 # Intel Realsense Dxxx Install
+- ref: https://github.com/IntelRealSense/librealsense/blob/master/doc/distribution_linux.md
 
 ```
 sudo apt-get install ros-dashing-librealsense2
