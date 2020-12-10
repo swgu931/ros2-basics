@@ -1,0 +1,19 @@
+# Darknet ROS2
+
+ref: 
+git clone https://github.com/ros2/darknet_vendor
+git clone https://github.com/ros2/openrobotics_darknet_ros
+git clone https://github.com/Kukanani/vision_msgs
+
+
+
+
+
+
+colcon build --symlink-install
+colcon build --cmake-args -DDARKNET_CUDA=Off -DCMAKE_BUILD_TYPE=Release --packages-select darknet_vendor
+
+  100  colcon build --cmake-args -DCMAKE_BUILD_TYPE=Release --packages-select darknet_vendor
+  101  colcon build --cmake-args -DDARKNET_CUDA=Off -DCMAKE_BUILD_TYPE=Release --packages-select darknet_vendor
+  102  colcon build --cmake-args -DDARKNET_CUDA=Off -DCMAKE_BUILD_TYPE=Release --packages-select openrobotics_darknet_ros
+  103  vi /home/ubuntu/ros2_ws/src/openrobotics_darknet_ros/src/detector_network.cpp +154
