@@ -19,3 +19,9 @@ source ./02setup_realsense_camera_gui.sh
 ## step 3: inside docker in running
 source ./03ros2_run_rviz2_realsense_inside_docker.sh
 
+
+# setup for nVidia jetson Board
+
+https://github.com/intelrealsense/librealsense/blob/master/doc/installation_jetson.md
+
+
