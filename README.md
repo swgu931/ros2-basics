@@ -7,11 +7,12 @@ This is to help engineers who start robot software using ros2
 
 1) ROS2 Install 
 ```
-$ source ./env-setup-ros2.sh
+go to ./howto
+$ source ./install-ros2.sh
 ```
 2) Environment Setup 
 ```
-$ source ./install-ros2.sh
+$ source ./env-setup-ros2.sh
 ```
 
 ## Basice Test for ensuring proper setup
