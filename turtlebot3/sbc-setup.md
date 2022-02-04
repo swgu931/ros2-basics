@@ -1,4 +1,5 @@
 # SBC (Raspberry pi) setup for OpenCR setup
+## ref: https://emanual.robotis.com/docs/en/platform/turtlebot3/opencr_setup/#opencr-setup
 
 ```
 sudo dpkg --add-architecture armhf
