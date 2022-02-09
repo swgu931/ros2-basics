@@ -1,6 +1,11 @@
 # Useful site for turtlebot3 and OpenCR
 
 ```
+https://emanual.robotis.com/docs/en/platform/turtlebot3/quick-start/
+
+https://emanual.robotis.com/docs/en/parts/controller/opencr10/
+https://www.arduino.cc/en/Main/Software
+
 https://github.com/ROBOTIS-GIT/emanual/blob/master/docs/en/platform/turtlebot3/locomotion.md
 
 https://github.com/ROBOTIS-GIT/OpenCR/tree/master/arduino/opencr_arduino/opencr/libraries/turtlebot3/examples
@@ -16,6 +21,7 @@ https://github.com/micro-ROS/micro_ros_arduino#arduino-ide
 
 ## OpenCR examples
 https://github.com/ROBOTIS-GIT/OpenCR/tree/master/arduino/opencr_arduino/opencr/libraries/OpenCR/examples
-
+https://www.arduino.cc/en/Main/Software
 https://docs.arduino.cc/software/ide-v1/tutorials/installing-libraries
+
 ```
