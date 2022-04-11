@@ -8,6 +8,8 @@ sudo apt-get install ros-dashing-librealsense2
 
 sudo apt-get install -y libssl-dev libusb-1.0-0-dev pkg-config libgtk-3-dev
 sudo apt-get install -y libglfw3-dev libgl1-mesa-dev libglu1-mesa-dev
+sudo apt-get install -y ros-$ROS_DISTRO-image-transport
+sudo apt-get install -y ros-$ROS_DISTRO-image-transport-plugins 
 ```
 
 # fetch code
