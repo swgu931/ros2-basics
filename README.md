@@ -29,6 +29,7 @@ $ ros2 run demo_nodes_py listener
 ```
 
 ## To test ros2 pub/sub
+
 ```
 source /opt/ros/foxy/setup.bash
 python3 publisher.py /chatter
@@ -39,9 +40,12 @@ python3 subscriber.py /chatter
 ```
 
 ## To test ros2 service
+- go to py_srvcli folder
 ```
+source ./py_srvcli/install/setup.bash
 ros2 run py_srvcli service
 ```
 ```
+source ./py_srvcli/install/setup.bash
 ros2 run py_srvcli client 2 3
 ```
