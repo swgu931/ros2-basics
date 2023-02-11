@@ -1,0 +1,46 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ros-talker-deployment
+  labels:
+    app: ros-talker
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ros-talker
+  template:
+    metadata:
+      labels:
+        app: ros-talker
+    spec:
+      containers:
+      - name: talker 
+        image: swgu931/cloud_bridge_pendulum:foxy-20230128
+        command: ["/bin/bash", "-c"]
+        args: ["source /opt/ros/foxy/setup.bash && python3 publisher.py talker"]
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ros-listener-deployment
+  labels:
+    app: ros-listener
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ros-listener
+  template:
+    metadata:
+      labels:
+        app: ros-listener
+    spec:
+      containers:
+      - name: listener
+        image: swgu931/cloud_bridge_pendulum:foxy-20230128
+        command: ["/bin/bash", "-c"]
+        args: ["source /opt/ros/foxy/setup.bash && python3 subscriber.py listener"]
+
