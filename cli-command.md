@@ -5,7 +5,7 @@ Install the turtlesim package for your ROS 2 distro:
 sudo apt install ros-<distro>-turtlesim
 ```
 
-##Check that the package installed:
+- Check that the package installed:
 ```
 ros2 pkg executables turtlesim
 ---
@@ -46,7 +46,7 @@ ros2 action list
 rqt --force-discover
 ```
 
-## Remapping
+- Remapping
 ```
 ros2 run turtlesim turtle_teleop_key --ros-args --remap turtle1/cmd_vel:=turtle2/cmd_vel
 ros2 run turtlesim turtlesim_node --ros-args --remap __node:=my_turtle
